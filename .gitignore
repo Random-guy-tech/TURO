@@ -38,3 +38,4 @@
 !/.github/workflows/
 /.github/workflows/*
 !/.github/workflows/check.yml
+!/.github/workflows/pages.yml

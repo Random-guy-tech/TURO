@@ -24,9 +24,11 @@ No npm dependencies need installing. `npm test` checks source assets, language c
 
 ## Repository and hosting
 
-The GitHub workflow performs checks on pushes and pull requests; it does not publish anything. A GitHub repository can hold the code while a separate static hosting provider serves the website.
+The check workflow validates pushes and pull requests. A separate Pages workflow publishes only `dist/` when Pages is enabled; until then it skips publishing. A GitHub repository can also hold the code while a separate static hosting provider serves the website.
 
 GitHub Pages restricts sites primarily directed at facilitating commercial transactions. This paid-request landing page should use a suitable business host instead. See [GitHub Pages usage limits](https://docs.github.com/en/pages/getting-started-with-github-pages/github-pages-limits).
+
+For GitHub Pages, a private personal repository requires an eligible paid plan, such as GitHub Pro. In the repository's **Settings > Pages**, choose **GitHub Actions** as the publishing source. Then open **Actions > Publish website to GitHub Pages > Run workflow** on `main`. The workflow obtains the actual Pages URL, generates the matching language/canonical/share metadata, runs the checks and publishes only `dist/`. Future pushes to `main` publish automatically while Pages remains enabled. Repository visibility is never changed by these workflows.
 
 When a real public URL is known, set it before building:
 
