@@ -1,0 +1,13 @@
+{
+  "name": "turo-website",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Turo's static English and Arabic website",
+  "scripts": {
+    "test": "node scripts/check-site.cjs",
+    "build": "node scripts/prepare-site.cjs"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}
